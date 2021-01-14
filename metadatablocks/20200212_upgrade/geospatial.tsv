@@ -1,0 +1,264 @@
+#metadataBlock	name	dataverseAlias   displayName													
+	geospatial		Geospatial Metadata												
+#datasetField	name	title	description	watermark	 fieldType	displayOrder	displayFormat	advancedSearchField	allowControlledVocabulary	allowmultiples	facetable	displayoncreate	required	parent	metadatablock_id
+	geographicCoverage	Geographic Coverage	Information on the geographic coverage of the data. Includes the total geographic scope of the data.		none	0		FALSE	FALSE	TRUE	FALSE	FALSE	TRUE		geospatial
+	country	Country / Nation	The country or nation that the Dataset is about.		text	1	#VALUE,	TRUE	TRUE	FALSE	TRUE	FALSE	TRUE	geographicCoverage	geospatial
+	state	State / Province	The state or province that the Dataset is about. Use GeoNames for correct spelling and avoid abbreviations.		text	2	#VALUE,	TRUE	FALSE	FALSE	TRUE	FALSE	FALSE	geographicCoverage	geospatial
+	city	City	The name of the city that the Dataset is about. Use GeoNames for correct spelling and avoid abbreviations.		text	3	#VALUE,	TRUE	FALSE	FALSE	TRUE	FALSE	FALSE	geographicCoverage	geospatial
+	otherGeographicCoverage	Other	Other information on the geographic coverage of the data.		text	4	#VALUE,	FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	geographicCoverage	geospatial
+	geographicUnit	Geographic Unit	Lowest level of geographic aggregation covered by the Dataset, e.g., village, county, region.		text	5		TRUE	FALSE	TRUE	TRUE	FALSE	FALSE		geospatial
+	geographicBoundingBox	Geographic Bounding Box	The fundamental geometric description for any Dataset that models geography is the geographic bounding box. It describes the minimum box, defined by west and east longitudes and north and south latitudes, which includes the largest geographic extent of the  Dataset's geographic coverage. This element is used in the first pass of a coordinate-based search. Inclusion of this element in the codebook is recommended, but is required if the bound polygon box is included.		none	6		FALSE	FALSE	TRUE	FALSE	FALSE	FALSE		geospatial
+	westLongitude	West Longitude	Westernmost coordinate delimiting the geographic extent of the Dataset. A valid range of values, expressed in decimal degrees, is -180,0 <= West  Bounding Longitude Value <= 180,0.		text	7		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	geographicBoundingBox	geospatial
+	eastLongitude	East Longitude	Easternmost coordinate delimiting the geographic extent of the Dataset. A valid range of values, expressed in decimal degrees, is -180,0 <= East Bounding Longitude Value <= 180,0.		text	8		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	geographicBoundingBox	geospatial
+	northLongitude	North Latitude	Northernmost coordinate delimiting the geographic extent of the Dataset. A valid range of values, expressed in decimal degrees, is -90,0 <= North Bounding Latitude Value <= 90,0.		text	9		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	geographicBoundingBox	geospatial
+	southLongitude	South Latitude	Southernmost coordinate delimiting the geographic extent of the Dataset. A valid range of values, expressed in decimal degrees, is -90,0 <= South Bounding Latitude Value <= 90,0.		text	10		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	geographicBoundingBox	geospatial
+#controlledVocabulary	DatasetField	Value	identifier	displayOrder											
+	country	Austria		0											
+	country	Afghanistan		1											
+	country	Åland Islands		2											
+	country	Albania		3											
+	country	Algeria		4											
+	country	American Samoa		5											
+	country	Andorra		6											
+	country	Angola		7											
+	country	Anguilla		8											
+	country	Antarctica		9											
+	country	Antigua and Barbuda		10											
+	country	Argentina		11											
+	country	Armenia		12											
+	country	Aruba		13											
+	country	Australia		14											
+	country	Azerbaijan		15											
+	country	Bahamas		16											
+	country	Bahrain		17											
+	country	Bangladesh		18											
+	country	Barbados		19											
+	country	Belarus		20											
+	country	Belgium		21											
+	country	Belize		22											
+	country	Benin		23											
+	country	Bermuda		24											
+	country	Bhutan		25											
+	country	Bolivia, Plurinational State of		26											
+	country	Bonaire, Sint Eustatius and Saba		27											
+	country	Bosnia and Herzegovina		28											
+	country	Botswana		29	BOTSWANA										
+	country	Bouvet Island		30											
+	country	Brazil		31	Brasil										
+	country	British Indian Ocean Territory		32											
+	country	Brunei Darussalam		33											
+	country	Bulgaria		34											
+	country	Burkina Faso		35											
+	country	Burundi		36											
+	country	Cambodia		37											
+	country	Cameroon		38											
+	country	Canada		39											
+	country	Cape Verde		40											
+	country	Cayman Islands		41											
+	country	Central African Republic		42											
+	country	Chad		43											
+	country	Chile		44											
+	country	China		45											
+	country	Christmas Island		46											
+	country	Cocos (Keeling) Islands		47											
+	country	Colombia		48											
+	country	Comoros		49											
+	country	Congo		50											
+	country	Congo, the Democratic Republic of the		51											
+	country	Cook Islands		52											
+	country	Costa Rica		53											
+	country	Côte d'Ivoire		54											
+	country	Croatia		55											
+	country	Cuba		56											
+	country	Curaçao		57											
+	country	Cyprus		58											
+	country	Czech Republic		59											
+	country	Denmark		60											
+	country	Djibouti		61											
+	country	Dominica		62											
+	country	Dominican Republic		63											
+	country	Ecuador		64											
+	country	Egypt		65											
+	country	El Salvador		66											
+	country	Equatorial Guinea		67											
+	country	Eritrea		68											
+	country	Estonia		69											
+	country	Ethiopia		70											
+	country	Falkland Islands (Malvinas)		71											
+	country	Faroe Islands		72											
+	country	Fiji		73											
+	country	Finland		74											
+	country	France		75											
+	country	French Guiana		76											
+	country	French Polynesia		77											
+	country	French Southern Territories		78											
+	country	Gabon		79											
+	country	Gambia		80	Gambia, The										
+	country	Georgia		81											
+	country	Germany		82	Germany (Federal Republic of)										
+	country	Ghana		83	GHANA										
+	country	Gibraltar		84											
+	country	Greece		85											
+	country	Greenland		86											
+	country	Grenada		87											
+	country	Guadeloupe		88											
+	country	Guam		89											
+	country	Guatemala		90											
+	country	Guernsey		91											
+	country	Guinea		92											
+	country	Guinea-Bissau		93											
+	country	Guyana		94											
+	country	Haiti		95											
+	country	Heard Island and Mcdonald Islands		96											
+	country	Holy See (Vatican City State)		97											
+	country	Honduras		98											
+	country	Hong Kong		99											
+	country	Hungary		100											
+	country	Iceland		101											
+	country	India		102	INDIA										
+	country	Indonesia		103	Sumatra										
+	country	Iran, Islamic Republic of		104	Iran	Iran (Islamic Republic of)									
+	country	Iraq		105	IRAQ										
+	country	Ireland		106											
+	country	Isle of Man		107											
+	country	Israel		108											
+	country	Italy		109											
+	country	Jamaica		110											
+	country	Japan		111											
+	country	Jersey		112											
+	country	Jordan		113											
+	country	Kazakhstan		114											
+	country	Kenya		115											
+	country	Kiribati		116											
+	country	Korea, Democratic People's Republic of		117											
+	country	Korea, Republic of		118											
+	country	Kuwait		119											
+	country	Kyrgyzstan		120											
+	country	Lao People's Democratic Republic		121	Laos										
+	country	Latvia		122											
+	country	Lebanon		123											
+	country	Lesotho		124	LESOTHO										
+	country	Liberia		125											
+	country	Libya		126											
+	country	Liechtenstein		127											
+	country	Lithuania		128											
+	country	Luxembourg		129											
+	country	Macao		130											
+	country	Macedonia, the Former Yugoslav Republic of		131											
+	country	Madagascar		132											
+	country	Malawi		133											
+	country	Malaysia		134											
+	country	Maldives		135											
+	country	Mali		136											
+	country	Malta		137											
+	country	Marshall Islands		138											
+	country	Martinique		139											
+	country	Mauritania		140											
+	country	Mauritius		141											
+	country	Mayotte		142											
+	country	Mexico		143											
+	country	Micronesia, Federated States of		144											
+	country	Moldova, Republic of		145											
+	country	Monaco		146											
+	country	Mongolia		147											
+	country	Montenegro		148											
+	country	Montserrat		149											
+	country	Morocco		150											
+	country	Mozambique		151	MOZAMBIQUE										
+	country	Myanmar		152											
+	country	Namibia		153	NAMIBIA										
+	country	Nauru		154											
+	country	Nepal		155											
+	country	Netherlands		156											
+	country	New Caledonia		157											
+	country	New Zealand		158											
+	country	Nicaragua		159											
+	country	Niger		160											
+	country	Nigeria		161											
+	country	Niue		162											
+	country	Norfolk Island		163											
+	country	Northern Mariana Islands		164											
+	country	Norway		165											
+	country	Oman		166											
+	country	Pakistan		167											
+	country	Palau		168											
+	country	Palestine, State of		169											
+	country	Panama		170											
+	country	Papua New Guinea		171											
+	country	Paraguay		172											
+	country	Peru		173											
+	country	Philippines		174											
+	country	Pitcairn		175											
+	country	Poland		176											
+	country	Portugal		177											
+	country	Puerto Rico		178											
+	country	Qatar		179											
+	country	Réunion		180											
+	country	Romania		181											
+	country	Russian Federation		182											
+	country	Rwanda		183											
+	country	Saint Barthélemy		184											
+	country	Saint Helena, Ascension and Tristan da Cunha		185											
+	country	Saint Kitts and Nevis		186											
+	country	Saint Lucia		187											
+	country	Saint Martin (French part)		188											
+	country	Saint Pierre and Miquelon		189											
+	country	Saint Vincent and the Grenadines		190											
+	country	Samoa		191											
+	country	San Marino		192											
+	country	Sao Tome and Principe		193											
+	country	Saudi Arabia		194											
+	country	Senegal		195											
+	country	Serbia		196											
+	country	Seychelles		197											
+	country	Sierra Leone		198											
+	country	Singapore		199											
+	country	Sint Maarten (Dutch part)		200											
+	country	Slovakia		201											
+	country	Slovenia		202											
+	country	Solomon Islands		203											
+	country	Somalia		204											
+	country	South Africa		205											
+	country	South Georgia and the South Sandwich Islands		206											
+	country	South Sudan		207											
+	country	Spain		208											
+	country	Sri Lanka		209											
+	country	Sudan		210											
+	country	Suriname		211											
+	country	Svalbard and Jan Mayen		212											
+	country	Swaziland		213	SWAZILAND										
+	country	Sweden		214											
+	country	Switzerland		215											
+	country	Syrian Arab Republic		216											
+	country	Taiwan, Province of China		217	Taiwan										
+	country	Tajikistan		218											
+	country	Tanzania, United Republic of		219	Tanzania										
+	country	Thailand		220											
+	country	Timor-Leste		221											
+	country	Togo		222											
+	country	Tokelau		223											
+	country	Tonga		224											
+	country	Trinidad and Tobago		225											
+	country	Tunisia		226											
+	country	Turkey		227											
+	country	Turkmenistan		228											
+	country	Turks and Caicos Islands		229											
+	country	Tuvalu		230											
+	country	Uganda		231											
+	country	Ukraine		232											
+	country	United Arab Emirates		233	UAE										
+	country	United Kingdom		234											
+	country	United States		235	U.S.A	USA	United States of America	U.S.A.							
+	country	United States Minor Outlying Islands		236											
+	country	Uruguay		237											
+	country	Uzbekistan		238											
+	country	Vanuatu		239											
+	country	Venezuela, Bolivarian Republic of		240											
+	country	Viet Nam		241											
+	country	Virgin Islands, British		242											
+	country	Virgin Islands, U.S.		243											
+	country	Wallis and Futuna		244											
+	country	Western Sahara		245											
+	country	Yemen		246	YEMEN										
+	country	Zambia		247											
+	country	Zimbabwe		248											
