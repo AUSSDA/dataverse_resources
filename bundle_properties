@@ -242,8 +242,48 @@ notification.ingest.completed=Dataset <a href="{0}/dataset.xhtml?persistentId={1
 notification.ingest.completedwitherrors=Dataset <a href="{0}/dataset.xhtml?persistentId={1}" title="{2}">{2}</a> ingest process has finished with errors.<br><br>Ingested files:{3}<br>
 notification.mail.import.filesystem=Dataset {2} ({0}/dataset.xhtml?persistentId={1}) has been successfully uploaded and verified.
 notification.import.filesystem=Dataset <a href="/dataset.xhtml?persistentId={0}" title="{1}">{1}</a> has been successfully uploaded and verified.
+notification.mail.globus.download.completed=Globus transfer of file(s) from the dataset  <a href="{0}/dataset.xhtml?persistentId={1}" title="{2}">{2}</a> was successful. <br><br> {3}<br>
+notification.mail.globus.upload.completedWithErrors=Globus transfer to Dataset  <a href="{0}/dataset.xhtml?persistentId={1}" title="{2}">{2}</a> is complete with errors. <br><br> {3}<br>
+notification.mail.globus.download.completedWithErrors=Globus transfer from the dataset  <a href="{0}/dataset.xhtml?persistentId={1}" title="{2}">{2}</a> is complete with errors. <br><br> {3}<br>
+
+notification.globus.upload.completed=Globus transfer to Dataset <a href="/dataset.xhtml?persistentId={0}" title="{1}">{1}</a> was successful. File(s) have been uploaded and verified.
+notification.globus.download.completed=Globus transfer from the dataset <a href="/dataset.xhtml?persistentId={0}" title="{1}">{1}</a> was successful.
+notification.globus.upload.completedWithErrors=Globus transfer to Dataset <a href="/dataset.xhtml?persistentId={0}" title="{1}">{1}</a> is complete with errors.
+notification.globus.download.completedWithErrors=Globus transfer from the dataset <a href="/dataset.xhtml?persistentId={0}" title="{1}">{1}</a> is complete with errors.
 notification.import.checksum=<a href="/dataset.xhtml?persistentId={0}" title="{1}">{1}</a>, dataset had file checksums added via a batch job.
 removeNotification=Remove Notification
+
+# These are the labels of the options where the muted notifications can be selected by the users
+notification.muteOptions=Notification settings
+notification.mutedEmails=Select the email notifications you wish to receive:
+notification.mutedNotifications=Select the in-app notifications you wish to receive:
+
+# Notification types descriptions as presentend to the user. Leave the description empty or leave it out entirely in order to make it not selectable for muting by the user.
+notification.typeDescription.ASSIGNROLE=Role is assigned
+notification.typeDescription.REVOKEROLE=Role is revoked
+notification.typeDescription.CREATEDV=Dataverse collection is created
+notification.typeDescription.CREATEDS=Your dataset is created
+notification.typeDescription.CREATEACC=Account is created
+notification.typeDescription.SUBMITTEDDS=Submitted for review
+notification.typeDescription.RETURNEDDS=Returned from review
+notification.typeDescription.PUBLISHEDDS=Dataset is published
+notification.typeDescription.REQUESTFILEACCESS=Access to file is requested
+notification.typeDescription.GRANTFILEACCESS=Access to file is granted
+notification.typeDescription.REJECTFILEACCESS=Access to file is rejected
+notification.typeDescription.FILESYSTEMIMPORT=Dataset has been successfully uploaded and verified
+notification.typeDescription.CHECKSUMIMPORT=Dataset had file checksums added via a batch job
+notification.typeDescription.CHECKSUMFAIL=Checksum validation failed
+notification.typeDescription.CONFIRMEMAIL=Email Verification
+notification.typeDescription.APIGENERATED=API token is generated
+notification.typeDescription.INGESTCOMPLETED=Ingest is completed
+notification.typeDescription.INGESTCOMPLETEDWITHERRORS=Ingest completed with errors
+notification.typeDescription.PUBLISHFAILED_PIDREG=Publish has failed
+notification.typeDescription.WORKFLOW_SUCCESS=External workflow run has succeeded
+notification.typeDescription.WORKFLOW_FAILURE=External workflow run has failed
+notification.typeDescription.STATUSUPDATED=Status of dataset has been updated
+notification.typeDescription.DATASETCREATED=Dataset was created by user
+notification.typeDescription.DATASETMENTIONED=Dataset was referenced in remote system
+
 groupAndRoles.manageTips=Here is where you can access and manage all the groups you belong to, and the roles you have been assigned.
 user.message.signup.label=Create Account
 user.message.signup.tip=Why have a Dataverse account? To create your own dataverse and customize it, add datasets, or request access to restricted files.
@@ -703,6 +743,7 @@ dashboard.card.datamove.dataset.command.error.indexingProblem=Dataset could not 
 #MailServiceBean.java
 notification.email.create.dataverse.subject={0}: Your dataverse has been created
 notification.email.create.dataset.subject={0}: Your dataset has been created
+notification.email.dataset.created.subject={0}: Your dataset has been created
 notification.email.request.file.access.subject={0}: Access has been requested for a restricted file
 notification.email.grant.file.access.subject={0}: You have been granted access to a restricted file
 notification.email.rejected.file.access.subject={0}: Your request for access to a restricted file has been rejected
@@ -746,6 +787,7 @@ notification.email.revokeRole=One of your roles for the {0} "{1}" has been revok
 notification.email.changeEmail=Hello, {0}.{1}\n\nPlease contact us if you did not intend this change or if you need assistance.
 notification.email.passwordReset=Hi {0},\n\nSomeone, hopefully you, requested a password reset for {1}.\n\nPlease click the link below to reset your Dataverse account password:\n\n {2} \n\n The link above will only work for the next {3} minutes.\n\n Please contact us if you did not request this password reset or need further help.
 notification.email.passwordReset.subject=Dataverse Password Reset Requested
+notification.email.datasetWasCreated=Dataset "<a href = "{0}">{1}</a>" was just created by {2} in the {3} collection.
 hours=hours
 hour=hour
 minutes=minutes
@@ -1186,6 +1228,10 @@ dataset.message.manageTemplates.message=Create a template prefilled with metadat
 # metadataFragment.xhtml
 dataset.anonymized.withheld=withheld
 
+dataset.metadatalanguage.create.guidance=Please enter metadata in the <b>{0}</b> language, or change the metadata language choice in the parent dataverse before proceeding.
+dataset.metadatalanguage.view.guidance=This dataset has been configured to use <b>{0}</b> as the language for all metadata entries.
+dataset.metadatalanguage.title=Metadata entered for this dataset will be assumed to be in the selected language. Cannot be changed after dataset is created.
+dataset.metadatalanguage.tip=Select the language you wish to use when entering metadata.
 # template.xhtml
 dataset.template.name.tip=The name of the dataset template.
 dataset.template.returnBtn=Return to Manage Templates
@@ -1773,6 +1819,7 @@ file.dataFilesTab.terms.list.license.edit.description=This dataset will be publi
 file.dataFilesTab.terms.list.license.customterms.txt=\u2014 the following Custom Dataset Terms have been defined for this dataset.
 file.dataFilesTab.terms.list.termsOfUse.waiver=Waiver
 file.dataFilesTab.terms.list.termsOfUse.waiver.title=The waiver informs data downloaders how they can use this dataset.
+file.dataFilesTab.terms.list.license.view.description=Datasets will default to a <a href="https://creativecommons.org/publicdomain/zero/1.0/" title="Public Domain Dedication - Creative Commons" target="_blank">CC0 public domain dedication </a>. CC0 facilitates reuse and extensibility of research data. Our <a href="https://dataverse.org/best-practices/dataverse-community-norms" title="Dataverse Community Norms - Dataverse.org" target="_blank">Community Norms</a> as well as good scientific practices expect that proper credit is given via citation. If you are unable to give datasets a CC0 waiver you may enter custom Terms of Use for datasets.
 file.dataFilesTab.terms.list.termsOfUse.waiver.txt=CC0 - "Public Domain Dedication"
 file.cc0.icon.alttxt=Creative Commons CC0 1.0 Public Domain Dedication icon
 file.dataFilesTab.terms.list.termsOfUse.waiver.description=Datasets will default to a <a href="https://creativecommons.org/publicdomain/zero/1.0/" title="Public Domain Dedication - Creative Commons" target="_blank">CC0 public domain dedication </a>. CC0 facilitates reuse and extensibility of research data. Our <a href="https://dataverse.org/best-practices/dataverse-community-norms" title="Dataverse Community Norms - Dataverse.org" target="_blank">Community Norms</a> as well as good scientific practices expect that proper credit is given via citation. If you are unable to give datasets a CC0 waiver you may enter custom Terms of Use for datasets.
@@ -1958,6 +2005,7 @@ file.results.btn.sort.option.type=Type
 file.compute.fileAccessDenied=This file is restricted and you may not compute on it because you have not been granted access.
 file.configure.Button=Configure
 
+file.remotelyStored=This file is stored remotely - click for more info 
 file.auxfiles.download.header=Download Auxiliary Files
 # These types correspond to the AuxiliaryFile.Type enum.
 file.auxfiles.types.DP=Differentially Private Statistics
@@ -2181,6 +2229,7 @@ citationFrame.banner.countdownMessage.seconds=seconds
 
 #file-edit-popup-fragment.xhtml #editFilesFragment.xhtml
 dataset.access.accessHeader=Restrict Files and Add Dataset Terms of Access
+dataset.access.accessHeader.invalid.state=Define Data Access
 dataset.access.description=Restricting limits access to published files. You can add or edit Terms of Access for the dataset, and allow people to Request Access to restricted files.
 dataset.access.description.disable=If you disable request access, you must add information about access to the Terms of Access field.
 dataset.access.description.line.2=Learn about restricting files and dataset access in the <a href="{0}/{1}/user/dataset-management.html#restricted-files-terms-of-access" title="Dataverse User Guide" target="_blank">User Guide</a>.
