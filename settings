@@ -1,0 +1,1 @@
+curl -X PUT -d https://aussda.at/en/aussda-dataverse-user-guide/ http://localhost:8080/api/admin/settings/:NavbarGuidesUrl
