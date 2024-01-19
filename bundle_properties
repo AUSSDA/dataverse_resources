@@ -287,7 +287,7 @@ notification.typeDescription.DATASETMENTIONED=Dataset was referenced in remote s
 groupAndRoles.manageTips=Here is where you can access and manage all the groups you belong to, and the roles you have been assigned.
 user.message.signup.label=Create Account
 user.message.signup.tip=Why have a Dataverse account? To create your own dataverse and customize it, add datasets, or request access to restricted files.
-user.signup.otherLogInOptions.tip=You can also create a Dataverse account with one of our other <a href="/loginpage.xhtml" title="Dataverse Log In">log in options</a>.
+user.signup.otherLogInOptions.tip=<H4>You are a student or employee of a university or another academic institution? Then you do not need to create a new account! Go to <a href="/loginpage.xhtml" title="Dataverse Log In">log in</a>, select your institution from the list and log in using your institutional credentials.</H4>
 user.username.illegal.tip=Between 2-60 characters, and can use "a-z", "0-9", "_" for your username.
 user.username=Username
 user.username.taken=This username is already taken.
@@ -365,12 +365,12 @@ login.System=Login System
 login.forgot.text=Forgot your password?
 login.builtin=Dataverse Account
 login.institution=Institutional Account
-login.institution.blurb=Log in or sign up with your institutional account &mdash; more <a href="{0}/{1}/user/account.html" title="Account Creation + Management - Dataverse User Guide" target="_blank" rel="noopener">information about account creation</a>.
-login.institution.support.blurbwithLink=Leaving your institution? Please contact {0} for assistance.
+login.institution.blurb=Log in with your institutional account: Search for the English name of your institution, by typing the city/region/country part. Select your institution from the list and log in using your institutional credentials.
+login.institution.support.blurbwithLink=For more <a href="https://aussda.at/en/aussda-dataverse-user-guide/" title="AUSSDA Dataverse User Guide" target="_blank" rel="noopener">information on account creation</a>.
 login.builtin.credential.usernameOrEmail=Username/Email
 login.builtin.credential.password=Password
 login.builtin.invalidUsernameEmailOrPassword=The username, email address, or password you entered is invalid. Need assistance accessing your account?
-login.signup.blurb=<a href="{0}">Sign up for a Dataverse account</a>.
+login.signup.blurb=<a href="{0}">If you cannot find your institution in the list, please sign up for a Dataverse account</a>.
 login.echo.credential.name=Name
 login.echo.credential.email=Email
 login.echo.credential.affiliation=Affiliation
@@ -382,9 +382,9 @@ login.button=Log In with {0}
 login.button.orcid=Create or Connect your ORCID
 # authentication providers
 auth.providers.title=Other options
-auth.providers.tip=You can convert a Dataverse account to use one of the options above. More <a href="{0}/{1}/user/account.html" title="Account Creation + Management - Dataverse User Guide" target="_blank" rel="noopener">information about account creation</a>.
+auth.providers.tip=You can convert a Dataverse account to use one of the options above. More <a href="https://aussda.at/en/aussda-dataverse-user-guide/" title="AUSSDA Dataverse User Guide" target="_blank" rel="noopener">information about account creation</a>.
 auth.providers.title.builtin=Username/Email
-auth.providers.title.shib=Your Institution
+auth.providers.title.shib=Select your institution
 auth.providers.title.orcid=ORCID
 auth.providers.title.google=Google
 auth.providers.title.github=GitHub
@@ -971,7 +971,7 @@ dataverse.results.types.datasets=Datasets
 dataverse.results.types.files=Files
 dataverse.results.btn.filterResults=Filter Results
 # Bundle file editors, please note that "dataverse.results.empty.zero" is used in a unit test
-dataverse.results.empty.zero=There are no dataverses, datasets, or files that match your search. Please try a new search by using other or broader terms. You can also check out the <a href="{0}/{1}/user/find-use-data.html" title="Finding &amp; Using Data - Dataverse User Guide" target="_blank">search guide</a> for tips.
+dataverse.results.empty.zero=There are no dataverses, datasets, or files that match your search. Please try a new search by using other or broader terms. You can also check out the <a href="https://aussda.at/en/aussda-dataverse-user-guide/" title="AUSSDA Dataverse User Guide" target="_blank">user guide</a> for tips.
 # Bundle file editors, please note that "dataverse.results.empty.hidden" is used in a unit test
 dataverse.results.empty.hidden=There are no search results based on how you have narrowed your search. You can check out the <a href="{0}/{1}/user/find-use-data.html" title="Finding &amp; Using Data - Dataverse User Guide" target="_blank">search guide</a> for tips.
 dataverse.results.empty.browse.guest.zero=This dataverse currently has no dataverses, datasets, or files. Please <a href="/loginpage.xhtml{0}" title="Log into your Dataverse Account">log in</a> to see if you are able to add to it.
