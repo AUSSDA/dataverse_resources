@@ -97,5 +97,12 @@
     </div>
   </div>
 </body>
-
+<script type = "text/javascript" >
+    document.querySelectorAll('.ui-datalist-item').forEach(el => {
+        const span = el.querySelector('span.facetCategoryName');
+        if (span && span.textContent.trim() === 'License') {
+            el.style.display = 'none';
+        }
+    });
+</script>
 </html>
