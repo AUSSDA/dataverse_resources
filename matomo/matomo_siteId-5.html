@@ -1,20 +1,71 @@
-<!-- Matomo -->
-<script type="text/plain" data-cookieconsent="statistics">
+<!-- Hide Empty Cookie Categories  -->
+<script type="text/javascript">
+window.addEventListener("CookiebotOnDialogDisplay", e => { 
+const detailCategories = ["Preference", "Statistics", "Advertising", "Unclassified"], 
+toggleCategories = ["Preferences", "Statistics", "Marketing"]; 
+detailCategories.forEach(e => { 
+if (CookieConsentDialog[`cookieTable${e}Count`] === 0) 
+document.getElementById( 
+`CybotCookiebotDialogDetailBodyContentCookieContainer${e}Card` 
+).parentNode.style.display = "none"; 
+}); 
+for (let i = 0; i < 3; i++) 
+if (CookieConsentDialog[`cookieTable${detailCategories[i]}Count`] === 0) 
+document.querySelector( 
+`label[for=CybotCookiebotDialogBodyLevelButton${toggleCategories[i]}]` 
+).parentNode.style.display = "none"; 
+}, !1)
+</script>
+<!-- Matomo 1 -->
+<script>
+var waitForTrackerCount = 0;
+function matomoWaitForTracker() {
+  if (typeof _paq === 'undefined' || typeof Cookiebot === 'undefined') {
+    if (waitForTrackerCount < 40) {
+      setTimeout(matomoWaitForTracker, 250);
+      waitForTrackerCount++;
+      return;
+    }
+  } else {
+    window.addEventListener('CookiebotOnAccept', function (e) {
+        consentSet();
+    });
+    window.addEventListener('CookiebotOnDecline', function (e) {
+        consentSet();
+    })
+  }
+}
+function consentSet() {
+  if (Cookiebot.consent.statistics) {
+    _paq.push(['rememberCookieConsentGiven']);
+    _paq.push(['setConsentGiven']);
+  } else {
+    _paq.push(['forgetCookieConsentGiven']); 
+    _paq.push(['deleteCookies']);
+  }
+}
+document.addEventListener('DOMContentLoaded', matomoWaitForTracker);
+</script>
+<!-- Cookiebot -->
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="4d203913-a808-44e3-8320-9c1150aca055" data-blockingmode="auto" type="text/javascript"></script>
+<!-- End Cookiebot -->
+<!-- Matomo 2 -->
+<script>
   var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['requireCookieConsent']);
   _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
   _paq.push(["setCookieDomain", "*.aussda.at"]);
+  _paq.push(["setDomains", ["*.aussda.at","*.aussda.eu","*.aussda.net","*.aussda.org","*.data.aussda.at","*.dataverse.at","*.aussda.at","*.aussda.eu","*.aussda.net","*.aussda.org","*.data.aussda.at","*.dataverse.at"]]);
+  _paq.push(["setExcludedQueryParams", ["cHash","tx_news_pi1.*"]]);
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
-  (function () {
-    var u = "https://www.univie.ac.at/aussda/matomo/";
-    _paq.push(['setTrackerUrl', u + 'matomo.php']);
+  (function() {
+    var u="https://webtrafficstats.univie.ac.at/matomo/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
     _paq.push(['setSiteId', '5']);
-    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-    g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<noscript>
-  <p><img src="https://www.univie.ac.at/aussda/matomo/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt="" /></p>
-</noscript>
+<noscript><p><img src="https://webtrafficstats.univie.ac.at/matomo/matomo.php?idsite=5&amp;rec=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Matomo Code -->
