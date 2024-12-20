@@ -1,0 +1,26 @@
+{
+    "status": "OK",
+    "data": {
+        "id": 1,
+        "alias": "AUSSDA",
+        "name": "AUSSDA",
+        "dataverseContacts": [{
+                "displayOrder": 0,
+                "contactEmail": "info@aussda.at"
+            }
+        ],
+        "permissionRoot": true,
+        "description": "<h3>Find data, share data, and cite data with confidence.</h3>\nGet started! Sign in with your institutional account to get fast and easy access to most of our datasets and accompanying documentation. Search for datasets by entering topics you are interested in into the search bar. Discover collections in Dataverses directly below. <a href=\"https://www.aussda.at/en/faq-downloads/\">FAQ & Downloads</a>.",
+        "dataverseType": "UNCATEGORIZED",
+        "creationDate": "2017-06-27T11:21:42Z",
+        "theme": {
+            "id": 2,
+            "tagline": "We make social science data accessible and reusable.",
+            "linkUrl": "https://aussda.at",
+            "linkColor": "11897b",
+            "textColor": "888888",
+            "backgroundColor": "F5F5F5",
+            "logoBackgroundColor": "F5F5F5"
+        }
+    }
+}
