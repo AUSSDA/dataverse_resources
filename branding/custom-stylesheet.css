@@ -9,3 +9,8 @@
                 max-width: 85%;
         }
 }
+
+/* change the color of the License-Data Use Agreement */
+.col-sm-9 .help-block {
+	color: #515151;
+}
