@@ -24,7 +24,7 @@ function IdPSelectUIParms() {
     this.ie6Hack = null;             // An array of structures to disable when drawing the pull down (needed to 
     // handle the ie6 z axis problem
     this.insertAtDiv = 'idpSelect';  // The div where we will insert the data
-    this.maxResults = 15;            // How many results to show at once or the number at which to
+    this.maxResults = 20;            // How many results to show at once or the number at which to
     // start showing if alwaysShow is false
     this.myEntityID = null;          // If non null then this string must match the string provided in the DS parms
     this.preferredIdP = null;        // Array of entityIds to always show
